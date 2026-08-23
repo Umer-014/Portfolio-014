@@ -4,7 +4,7 @@ export const profile = {
   location: "London, UK",
   email: "umer.riaz2810@gmail.com",
   github: "https://github.com/Umer-014",
-  linkedin: "https://linkedin.com/in/umer-riaz",
+  linkedin: "https://www.linkedin.com/in/muhammad-umer-riaz-u014/",
   resumeUrl: "/resume.pdf",
   tagline:
     "I build systems that ship — from ride-hailing platforms to cloud-deployed inventory AI — and I'm currently finishing an MSc in Data Science while consulting on production software.",
