@@ -278,6 +278,76 @@ export const projects = [
     ],
   },
   {
+    slug: "sipup-analytics",
+    name: "SipUp Retail Analytics & Inventory Platform",
+    tagline: "A retail analytics platform bringing sales, inventory movements, and store performance into one operational view.",
+    year: "2026",
+    role: "Software Developer",
+    status: "DEPLOYED — LIVE",
+    categories: ["Software Development", "Data Visualization"],
+    externalUrl: "https://analytics.sipup.co.uk/",
+    cover: { icon: "bar-chart", gradient: "from-cyan to-mint" },
+    techStack: ["React", "Analytics Dashboards", "Inventory Management", "Data Reporting", "Excel Export"],
+    overview: "SipUp is a retail analytics and inventory platform designed to help teams review sales activity, monitor stock, and make operational decisions using a centralised view of business data.",
+    problem: "Retail operations can become difficult to oversee when sales activity, stock adjustments, and store-level reporting are spread across separate workflows.",
+    solution: "The platform brings key operational information into a single interface, helping users review sales performance, follow inventory changes, and export reports for further analysis.",
+    architecture: "Retail and EPOS data → application data layer → analytics and inventory views → reporting and export",
+    features: [
+      "Sales reporting and store-level performance views",
+      "Inventory visibility and stock adjustment history",
+      "EPOS transaction review",
+      "Operational reporting with Excel export",
+      "A central workspace for day-to-day retail analysis"
+    ],
+    challenges: [
+      "Presenting operational data clearly so users can move between sales and stock workflows without losing context.",
+      "Making reports useful for day-to-day decisions while keeping the interface approachable for non-technical users."
+    ],
+    results: [
+      "Delivered a live analytics platform for reviewing retail sales and inventory information.",
+      "Consolidated key reporting workflows into a single interface."
+    ],
+    future: [
+      "Add role-based reporting views for different store responsibilities.",
+      "Expand trend analysis and forecasting as validated data and requirements become available."
+    ]
+  },
+  {
+    slug: "whisky-circle-ecommerce",
+    name: "The Whisky Circle E-Commerce Platform",
+    tagline: "An e-commerce experience supported by cloud APIs and customer-facing shopping workflows.",
+    year: "2026",
+    role: "Web Developer",
+    status: "DEPLOYED — STAGING",
+    categories: ["Software Development", "Cloud"],
+    externalUrl: "https://stage.whiskycircle.co.uk/",
+    cover: { icon: "shopping-cart", gradient: "from-amber to-violet" },
+    techStack: ["React", "Node.js", "AWS Lambda", "API Gateway", "MongoDB", "Stripe"],
+    overview: "The Whisky Circle is an e-commerce website project with a customer-facing storefront and supporting backend services, developed with a modern React and cloud-oriented stack.",
+    problem: "An online store needs a coherent browsing and checkout experience while coordinating product information and backend services reliably.",
+    solution: "The project combines a responsive React storefront with API-driven backend functionality and a database-backed application layer. The current public link is a staging deployment, so it is labelled accordingly.",
+    architecture: "React storefront → API Gateway → AWS Lambda services → MongoDB, with payment integration handled through Stripe where enabled",
+    features: [
+      "Responsive storefront and product browsing",
+      "API-backed application workflows",
+      "Cloud-hosted backend services",
+      "Database-backed product and application data",
+      "Staging deployment for review and iteration"
+    ],
+    challenges: [
+      "Keeping the customer-facing experience consistent while the application is developed across frontend and backend services.",
+      "Coordinating external integrations carefully so payment and order workflows can be tested before production release."
+    ],
+    results: [
+      "Published a staging website for review at stage.whiskycircle.co.uk.",
+      "Established a foundation for a cloud-backed e-commerce experience."
+    ],
+    future: [
+      "Complete end-to-end checkout and order-flow verification before production release.",
+      "Add verified screenshots and measurable outcomes once the production workflow is confirmed."
+    ]
+  },
+  {
     slug: "dgma-technics",
     name: "DGMA Technics Corporate Website",
     tagline: "A corporate website and product catalogue for an official representative of international defence manufacturers.",
