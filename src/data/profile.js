@@ -23,32 +23,64 @@ export const stats = [
 
 export const experience = [
   {
-    id: "ecovoltex",
-    company: "EcoVoltex",
-    role: "Software Developer & Technical Consultant",
-    period: "Dec 2024 — Present",
-    location: "Remote / London, UK",
-    type: "Freelance / Contract",
+    id: "appleberry",
+    company: "Appleberry Foods Limited",
+    role: "Data Scientist",
+    period: "Aug 2026 — Present",
+    location: "London, UK",
+    type: "Full-time",
     summary:
-      "Designing and building EcoVoltex's internal systems — company website, invoicing, attendance, HR, and business management — on a serverless AWS stack, alongside technical consulting on onboarding clients to marketplace and delivery platforms.",
+      "Building retail demand-forecasting and analytics experiences that connect live EPOS and stock data with manager-friendly operational decisions.",
     highlights: [
-      "Shipped 5 internal systems: company site, invoicing, attendance, HRM, business management",
-      "Built serverless backends on AWS Lambda, API Gateway, and MongoDB Atlas",
-      "Consulting on onboarding merchants to Amazon, eBay, Just Eat, Uber Eats, and Deliveroo",
+      "Built a retail demand-forecasting dashboard frontend using Vue 3, Pinia, and Vue Router, integrating REST APIs for live EPOS and stock data",
+      "Connected the interface to an AWS Lambda forecasting service to present store-level demand predictions as reorder guidance",
+      "Delivered sales reporting, stock-operation history, and Excel report export for store managers",
+    ],
+  },
+  {
+    id: "dgma",
+    company: "DGMA Technics Ltd",
+    role: "Full Stack Developer",
+    period: "May 2026 — Aug 2026",
+    location: "London, UK",
+    type: "Contract",
+    summary:
+      "Designed and delivered the DGMA Technics corporate website, including company information, manufacturer pages, and product categories across land, naval, aerospace, and heavy-industry systems.",
+    highlights: [
+      "Built the corporate website end-to-end using React",
+      "Integrated AWS-based hosting and deployment",
+      "Owned UI design, implementation, responsive optimisation, and SEO",
+    ],
+  },
+  {
+    id: "ecovoltex",
+    company: "Eco Voltex Ltd",
+    role: "Software Developer & Technical Consultant",
+    period: "Dec 2024 — Jan 2026",
+    location: "London, UK",
+    type: "Contract",
+    summary:
+      "Designed and built internal business systems and serverless cloud services, while advising on digital onboarding for marketplace and delivery platforms.",
+    highlights: [
+      "Built five internal systems: company website, invoicing, employee attendance, HR management, and business management",
+      "Developed Node.js/Express backends using AWS Lambda and API Gateway, with MongoDB Atlas and AWS hosting services",
+      "Supported merchant onboarding to Amazon, eBay, Just Eat, Uber Eats, and Deliveroo",
+      "Built the Haji Saab e-commerce platform using React, Stripe, and Radar API",
     ],
   },
   {
     id: "uol",
-    company: "UOL Electrical Engineering",
-    role: "Software Development Intern, R&D",
-    period: "Jan 2024 — Jul 2024",
-    location: "On-site",
+    company: "University of Lahore — Electrical Engineering R&D",
+    role: "Software Development Intern",
+    period: "Jun 2024 — Sep 2024",
+    location: "Lahore, Pakistan",
     type: "Internship",
     summary:
-      "Worked within the R&D division on internal software tooling, applying core software engineering practice inside an electrical engineering context.",
+      "Contributed to research and development software in an electrical engineering environment, combining machine learning, desktop UI development, and database work.",
     highlights: [
-      "Contributed to internal R&D software tooling",
-      "First professional exposure to engineering-driven software requirements",
+      "Implemented a KNN-based machine learning model to predict body measurements",
+      "Built a Python Tkinter GUI for data input and result visualisation",
+      "Managed and optimised MySQL databases for efficient data processing",
     ],
   },
 ];
