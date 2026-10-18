@@ -16,7 +16,7 @@ export default function FeaturedProjects() {
           <SectionHeading
             eyebrow="03 · Featured work"
             title="Projects, deployed and academic"
-            description="Eight builds spanning ride-hailing, e-commerce, internal tooling, and applied machine learning — from a solo final year project to a system running across five live stores."
+            description={`${projects.length} case studies spanning full-stack software, cloud systems, retail analytics, e-commerce, and applied machine learning.`}
           />
         </div>
 
