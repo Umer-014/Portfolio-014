@@ -2,46 +2,135 @@ export const categories = ["All", "Software Development", "Cloud", "Machine Lear
 
 export const projects = [
   {
-    slug: "rideshare-fyp",
-    name: "RideShare",
-    tagline: "A full Uber/Careem-style ride-hailing platform, built solo as a Final Year Project.",
-    year: "2024–2025",
-    role: "Sole Developer",
-    status: "ACADEMIC — GRADE A",
-    categories: ["Software Development"],
-    cover: { icon: "map", gradient: "from-violet to-cyan" },
-    techStack: ["React Native", "Node.js", "Express.js", "MongoDB", "Google Maps API", "Socket.io", "JWT Auth"],
-    overview:
-      "RideShare is a complete ride-hailing system covering both sides of the marketplace: riders booking trips and drivers fulfilling them, with an admin layer to run the business in between. Built end-to-end for my final year project, it mirrors the core mechanics of apps like Uber and Careem rather than a simplified classroom version.",
-    problem:
-      "Most student ride-sharing projects stop at a booking form. The brief I set myself was harder: two live mobile apps that need to agree, in real time, on where a car is, whether a rider has been picked up, and how much the trip costs — all while staying in sync through a single backend.",
-    solution:
-      "I split the system into three surfaces sharing one API: a passenger app for booking and tracking, a driver app for accepting rides and updating location, and an admin dashboard for oversight. A Node.js/Express backend handles auth, ride state, and location updates, with MongoDB storing users, rides, and driver positions. Live location moves over Socket.io so both apps see the same trip update within a second of it happening.",
-    architecture:
-      "Passenger App and Driver App (React Native) → REST + WebSocket API (Node.js/Express) → MongoDB. A ride-matching service assigns nearby drivers; a location service streams GPS pings from the driver app, fans them out over Socket.io to the passenger app, and persists trip history to MongoDB.",
+    slug: "ecovoltex-website",
+    name: "Eco Voltex Corporate Website",
+    tagline: "The public-facing website for Eco Voltex's electrical, fire safety, CCTV, and maintenance services.",
+    year: "2025–2026",
+    role: "Software Developer",
+    status: "DEPLOYED — LIVE",
+    categories: ["Software Development", "Cloud"],
+    externalUrl: "https://www.ecovoltex.co.uk/",
+    cover: { icon: "globe", gradient: "from-cyan to-mint" },
+    techStack: ["React", "AWS Hosting", "Responsive Design", "SEO"],
+    overview: "The Eco Voltex website presents the company's engineering and safety services to prospective customers and provides a clear route for enquiries.",
+    problem: "A specialist engineering contractor needs a professional online presence that explains its services clearly and makes it easy for commercial customers to get in touch.",
+    solution: "Developed a responsive company website with service-focused content and contact information, giving Eco Voltex a central digital presence.",
+    architecture: "Responsive web frontend → service and company information → contact/enquiry pathway",
     features: [
-      "Passenger booking flow with fare estimate before confirming",
-      "Live driver location tracking on the passenger's map during a trip",
-      "Driver app with accept/reject and turn-by-turn pickup routing",
-      "Admin dashboard for monitoring active rides, drivers, and users",
-      "JWT-based authentication for both rider and driver accounts",
-      "Ride history and basic fare/payment workflow",
+      "Company and service information",
+      "Electrical installation and testing service pages",
+      "Fire alarm, CCTV, and maintenance service information",
+      "Responsive layout for desktop and mobile visitors",
+      "Contact pathway for prospective customers"
     ],
     challenges: [
-      "Keeping two independently-running mobile apps consistent on ride state without a shared client store — solved with the backend as the single source of truth and short-poll fallbacks around the socket connection.",
-      "Google Maps API rate limits during testing, which pushed me to cache route calculations and only re-request when a driver's position moved past a distance threshold.",
-      "Battery drain from continuous GPS polling on the driver app, addressed by adjusting location update frequency based on trip state (idle vs. en route).",
+      "Presenting several related technical services clearly without overwhelming visitors.",
+      "Keeping the company presentation professional and easy to navigate across screen sizes."
     ],
     results: [
-      "Delivered a working three-app system (passenger, driver, admin) as a solo build within the FYP timeline",
-      "Achieved sub-second location propagation between driver and passenger apps in testing",
-      "Graded as a top final year project for technical completeness",
+      "Published the Eco Voltex corporate website at ecovoltex.co.uk.",
+      "Created a central online destination for company and service information."
     ],
     future: [
-      "Add a proper payment gateway (Stripe) instead of the current cash/manual settlement flow",
-      "Introduce driver ratings and a dispute-resolution flow in the admin dashboard",
-      "Move location updates to a lighter protocol for battery efficiency at scale",
+      "Add verified case studies and project photography.",
+      "Expand service-specific landing pages and enquiry tracking."
+    ]
+  },
+  {
+    slug: "ecovoltex-hr-system",
+    name: "Eco Voltex HR Management System",
+    tagline: "An internal system for organising employee information and HR administration.",
+    year: "2025–2026",
+    role: "Software Developer",
+    status: "INTERNAL BUSINESS SYSTEM",
+    categories: ["Software Development", "Cloud"],
+    cover: { icon: "users", gradient: "from-violet to-cyan" },
+    techStack: ["React", "Node.js", "Express.js", "MongoDB Atlas", "AWS Lambda", "API Gateway"],
+    overview: "An internal HR system developed for Eco Voltex to centralise employee records and support routine HR administration.",
+    problem: "Employee information and routine HR tasks become harder to manage when records are distributed across manual documents and separate workflows.",
+    solution: "Built an internal application with a web interface and API-backed data layer to bring employee records and HR workflows into one managed system.",
+    architecture: "Web frontend → API Gateway → AWS Lambda services → MongoDB Atlas",
+    features: [
+      "Centralised employee records",
+      "HR administration workflows",
+      "API-backed data access",
+      "Cloud-hosted application services"
     ],
+    challenges: [
+      "Structuring employee information so it can be maintained consistently.",
+      "Keeping access to internal business data within the application's intended workflows."
+    ],
+    results: [
+      "Delivered a dedicated HR system for internal company use."
+    ],
+    future: [
+      "Add role-specific permissions and audit history where required.",
+      "Extend HR workflows based on confirmed company requirements."
+    ]
+  },
+  {
+    slug: "ecovoltex-invoice-system",
+    name: "Eco Voltex Invoice Creation System",
+    tagline: "A business tool for creating and managing professional customer invoices.",
+    year: "2025–2026",
+    role: "Software Developer",
+    status: "INTERNAL BUSINESS SYSTEM",
+    categories: ["Software Development", "Cloud"],
+    cover: { icon: "file-text", gradient: "from-amber to-rose" },
+    techStack: ["React", "Node.js", "Express.js", "MongoDB Atlas", "AWS Lambda", "API Gateway"],
+    overview: "An internal invoicing application built to support Eco Voltex's day-to-day billing and document preparation.",
+    problem: "Producing consistent invoices manually can take time and make it harder to keep customer, job, and billing information organised.",
+    solution: "Created a web-based workflow for preparing professional invoices and managing invoice information through an API-backed application.",
+    architecture: "Web frontend → API Gateway → AWS Lambda services → MongoDB Atlas → invoice output",
+    features: [
+      "Invoice creation workflow",
+      "Structured customer and job information",
+      "Consistent invoice presentation",
+      "Centralised invoice records"
+    ],
+    challenges: [
+      "Keeping invoice details consistent while supporting different jobs and customers.",
+      "Making the invoice preparation workflow practical for everyday business use."
+    ],
+    results: [
+      "Delivered a dedicated invoice creation system for Eco Voltex."
+    ],
+    future: [
+      "Add reporting and payment-status summaries if required.",
+      "Expand invoice templates based on verified business needs."
+    ]
+  },
+  {
+    slug: "ecovoltex-analytics-system",
+    name: "Eco Voltex Analytics System",
+    tagline: "An internal analytics view to help the business review operational and commercial information.",
+    year: "2025–2026",
+    role: "Software Developer",
+    status: "INTERNAL BUSINESS SYSTEM",
+    categories: ["Software Development", "Data Visualization", "Cloud"],
+    cover: { icon: "chart-no-axes-combined", gradient: "from-mint to-cyan" },
+    techStack: ["React", "Data Visualization", "Node.js", "MongoDB Atlas", "AWS Lambda", "API Gateway"],
+    overview: "An internal analytics system intended to bring selected business information into a more accessible reporting interface for Eco Voltex.",
+    problem: "Operational information can be difficult to interpret when it is spread across separate business workflows and records.",
+    solution: "Developed an analytics interface to organise relevant business data into a central place for review. Specific metrics and integrations should be documented against the live implementation.",
+    architecture: "Business data sources → API-backed data layer → analytics interface and reporting views",
+    features: [
+      "Centralised view of selected business information",
+      "Data visualisation and reporting interface",
+      "API-backed data access",
+      "Foundation for future operational insights"
+    ],
+    challenges: [
+      "Presenting business data in a clear format that supports practical review.",
+      "Keeping reporting aligned with the available and validated source data."
+    ],
+    results: [
+      "Added a dedicated analytics project to the Eco Voltex internal systems portfolio."
+    ],
+    future: [
+      "Document and add verified KPIs from the implemented system.",
+      "Expand reporting only where reliable source data is available."
+    ]
   },
   {
     slug: "ecovoltex-systems",
@@ -83,6 +172,160 @@ export const projects = [
       "Add role-based dashboards so managers and staff see tailored views",
       "Integrate the attendance system with payroll calculations directly",
       "Layer in basic analytics across invoicing and attendance data",
+    ],
+  },
+  {
+    slug: "dgma-technics",
+    name: "DGMA Technics Corporate Website",
+    tagline: "A corporate website and product catalogue for an official representative of international defence manufacturers.",
+    year: "2025",
+    role: "Web Developer",
+    status: "DEPLOYED — LIVE",
+    categories: ["Software Development"],
+    cover: { icon: "shield", gradient: "from-ink-faint to-cyan" },
+    techStack: ["React.js", "SEO Optimisation", "Responsive Design"],
+    overview:
+      "The complete corporate website for DGMA Technics, an official representative of international defence manufacturers spanning land systems, naval systems, aerospace, and heavy industry equipment.",
+    problem:
+      "As a representative for multiple manufacturers across very different equipment categories, DGMA needed a site that could present land, naval, aerospace, and heavy industry product lines clearly to enquiring clients, while capturing and routing enquiries properly.",
+    solution:
+      "I structured the site around clear manufacturer and product-category pages, with a dedicated enquiry management flow so customer questions reach the right contact. SEO optimisation and fully responsive layouts were built in from the start, given the international, cross-device audience.",
+    architecture:
+      "React front end with category-based routing (Land / Naval / Aerospace / Heavy Industry) → enquiry form → contact management flow → responsive, SEO-optimised delivery.",
+    features: [
+      "Corporate homepage and company overview",
+      "Product catalogue organised by manufacturer and category",
+      "Manufacturer-specific pages for land, naval, aerospace, and heavy industry systems",
+      "Enquiry management with structured contact forms",
+      "SEO optimisation and full responsive design",
+    ],
+    challenges: [
+      "Presenting highly technical, category-diverse product lines (naval vs. aerospace vs. land systems) in a single coherent structure without the site feeling fragmented.",
+      "Balancing a professional, defence-industry tone with genuine usability for enquiry capture.",
+    ],
+    results: [
+      "Delivered a live corporate site covering all of DGMA's manufacturer relationships",
+      "Structured enquiry flow now routes customer contact requests directly",
+    ],
+    future: [
+      "Add a client portal for tracking enquiry status",
+      "Expand SEO content per product category",
+    ],
+  },
+  {
+    slug: "haji-saab-ecommerce",
+    name: "Haji Saab E-Commerce Platform",
+    tagline: "A complete enterprise e-commerce platform for a halal products business, from catalogue to secure payments.",
+    year: "2025",
+    role: "Full Stack Developer",
+    status: "DEPLOYED — LIVE",
+    categories: ["Software Development", "Cloud"],
+    cover: { icon: "shopping-cart", gradient: "from-amber to-rose" },
+    techStack: ["React.js", "Node.js", "AWS Lambda", "API Gateway", "MongoDB", "S3", "AWS Amplify", "Stripe", "Radar API"],
+    overview:
+      "A full commercial build for Haji Saab, a halal products business: a customer-facing store with catalogue, cart, and checkout, backed by admin tooling to manage products, orders, and inventory.",
+    problem:
+      "The business needed a real e-commerce operation — not just a storefront, but secure payments, order management, and inventory tracking — built and deployed as a production system for actual customers.",
+    solution:
+      "I built a responsive React storefront covering catalogue browsing, cart, and checkout, backed by serverless Node.js APIs on AWS Lambda and API Gateway. Stripe handles payments and the Radar API supports location-based features, with MongoDB storing products, orders, and customers, and S3/Amplify serving the deployed front end.",
+    architecture:
+      "React storefront + customer/admin dashboards → API Gateway → AWS Lambda (Node.js) → MongoDB. Stripe for payment processing, Radar API for location features, S3 + Amplify for hosting.",
+    features: [
+      "Product catalogue with browsing and search",
+      "Shopping cart and multi-step checkout",
+      "Stripe-secured payment processing",
+      "Customer dashboard for order tracking",
+      "Admin dashboard for product, order, and inventory management",
+      "Cloud-native deployment on AWS",
+    ],
+    challenges: [
+      "Handling inventory correctly under concurrent orders — resolved with atomic stock updates at the database layer instead of read-then-write logic.",
+      "Integrating Stripe and Radar into a single checkout flow without adding noticeable latency for the customer.",
+    ],
+    results: [
+      "Delivered a live, customer-facing e-commerce platform for a real business",
+      "Order, inventory, and payment flows running in production",
+    ],
+    future: [
+      "Add personalised product recommendations based on order history",
+      "Extend admin dashboard with sales analytics",
+    ],
+  },
+  {
+    slug: "whisky-circle-ecommerce",
+    name: "The Whisky Circle E-Commerce Platform",
+    tagline: "An e-commerce experience supported by cloud APIs and customer-facing shopping workflows.",
+    year: "2026",
+    role: "Web Developer",
+    status: "DEPLOYED — STAGING",
+    categories: ["Software Development", "Cloud"],
+    externalUrl: "https://stage.whiskycircle.co.uk/",
+    cover: { icon: "shopping-cart", gradient: "from-amber to-violet" },
+    techStack: ["React", "Node.js", "AWS Lambda", "API Gateway", "MongoDB", "Stripe"],
+    overview: "The Whisky Circle is an e-commerce website project with a customer-facing storefront and supporting backend services, developed with a modern React and cloud-oriented stack.",
+    problem: "An online store needs a coherent browsing and checkout experience while coordinating product information and backend services reliably.",
+    solution: "The project combines a responsive React storefront with API-driven backend functionality and a database-backed application layer. The current public link is a staging deployment, so it is labelled accordingly.",
+    architecture: "React storefront → API Gateway → AWS Lambda services → MongoDB, with payment integration handled through Stripe where enabled",
+    features: [
+      "Responsive storefront and product browsing",
+      "API-backed application workflows",
+      "Cloud-hosted backend services",
+      "Database-backed product and application data",
+      "Staging deployment for review and iteration"
+    ],
+    challenges: [
+      "Keeping the customer-facing experience consistent while the application is developed across frontend and backend services.",
+      "Coordinating external integrations carefully so payment and order workflows can be tested before production release."
+    ],
+    results: [
+      "Published a staging website for review at stage.whiskycircle.co.uk.",
+      "Established a foundation for a cloud-backed e-commerce experience."
+    ],
+    future: [
+      "Complete end-to-end checkout and order-flow verification before production release.",
+      "Add verified screenshots and measurable outcomes once the production workflow is confirmed."
+    ]
+  },
+  {
+    slug: "rideshare-fyp",
+    name: "RideShare",
+    tagline: "A full Uber/Careem-style ride-hailing platform, built solo as a Final Year Project.",
+    year: "2024–2025",
+    role: "Sole Developer",
+    status: "ACADEMIC — GRADE A",
+    categories: ["Software Development"],
+    cover: { icon: "map", gradient: "from-violet to-cyan" },
+    techStack: ["React Native", "Node.js", "Express.js", "MongoDB", "Google Maps API", "Socket.io", "JWT Auth"],
+    overview:
+      "RideShare is a complete ride-hailing system covering both sides of the marketplace: riders booking trips and drivers fulfilling them, with an admin layer to run the business in between. Built end-to-end for my final year project, it mirrors the core mechanics of apps like Uber and Careem rather than a simplified classroom version.",
+    problem:
+      "Most student ride-sharing projects stop at a booking form. The brief I set myself was harder: two live mobile apps that need to agree, in real time, on where a car is, whether a rider has been picked up, and how much the trip costs — all while staying in sync through a single backend.",
+    solution:
+      "I split the system into three surfaces sharing one API: a passenger app for booking and tracking, a driver app for accepting rides and updating location, and an admin dashboard for oversight. A Node.js/Express backend handles auth, ride state, and location updates, with MongoDB storing users, rides, and driver positions. Live location moves over Socket.io so both apps see the same trip update within a second of it happening.",
+    architecture:
+      "Passenger App and Driver App (React Native) → REST + WebSocket API (Node.js/Express) → MongoDB. A ride-matching service assigns nearby drivers; a location service streams GPS pings from the driver app, fans them out over Socket.io to the passenger app, and persists trip history to MongoDB.",
+    features: [
+      "Passenger booking flow with fare estimate before confirming",
+      "Live driver location tracking on the passenger's map during a trip",
+      "Driver app with accept/reject and turn-by-turn pickup routing",
+      "Admin dashboard for monitoring active rides, drivers, and users",
+      "JWT-based authentication for both rider and driver accounts",
+      "Ride history and basic fare/payment workflow",
+    ],
+    challenges: [
+      "Keeping two independently-running mobile apps consistent on ride state without a shared client store — solved with the backend as the single source of truth and short-poll fallbacks around the socket connection.",
+      "Google Maps API rate limits during testing, which pushed me to cache route calculations and only re-request when a driver's position moved past a distance threshold.",
+      "Battery drain from continuous GPS polling on the driver app, addressed by adjusting location update frequency based on trip state (idle vs. en route).",
+    ],
+    results: [
+      "Delivered a working three-app system (passenger, driver, admin) as a solo build within the FYP timeline",
+      "Achieved sub-second location propagation between driver and passenger apps in testing",
+      "Graded as a top final year project for technical completeness",
+    ],
+    future: [
+      "Add a proper payment gateway (Stripe) instead of the current cash/manual settlement flow",
+      "Introduce driver ratings and a dispute-resolution flow in the admin dashboard",
+      "Move location updates to a lighter protocol for battery efficiency at scale",
     ],
   },
   {
@@ -201,45 +444,6 @@ export const projects = [
     ],
   },
   {
-    slug: "haji-saab-ecommerce",
-    name: "Haji Saab E-Commerce Platform",
-    tagline: "A complete enterprise e-commerce platform for a halal products business, from catalogue to secure payments.",
-    year: "2025",
-    role: "Full Stack Developer",
-    status: "DEPLOYED — LIVE",
-    categories: ["Software Development", "Cloud"],
-    cover: { icon: "shopping-cart", gradient: "from-amber to-rose" },
-    techStack: ["React.js", "Node.js", "AWS Lambda", "API Gateway", "MongoDB", "S3", "AWS Amplify", "Stripe", "Radar API"],
-    overview:
-      "A full commercial build for Haji Saab, a halal products business: a customer-facing store with catalogue, cart, and checkout, backed by admin tooling to manage products, orders, and inventory.",
-    problem:
-      "The business needed a real e-commerce operation — not just a storefront, but secure payments, order management, and inventory tracking — built and deployed as a production system for actual customers.",
-    solution:
-      "I built a responsive React storefront covering catalogue browsing, cart, and checkout, backed by serverless Node.js APIs on AWS Lambda and API Gateway. Stripe handles payments and the Radar API supports location-based features, with MongoDB storing products, orders, and customers, and S3/Amplify serving the deployed front end.",
-    architecture:
-      "React storefront + customer/admin dashboards → API Gateway → AWS Lambda (Node.js) → MongoDB. Stripe for payment processing, Radar API for location features, S3 + Amplify for hosting.",
-    features: [
-      "Product catalogue with browsing and search",
-      "Shopping cart and multi-step checkout",
-      "Stripe-secured payment processing",
-      "Customer dashboard for order tracking",
-      "Admin dashboard for product, order, and inventory management",
-      "Cloud-native deployment on AWS",
-    ],
-    challenges: [
-      "Handling inventory correctly under concurrent orders — resolved with atomic stock updates at the database layer instead of read-then-write logic.",
-      "Integrating Stripe and Radar into a single checkout flow without adding noticeable latency for the customer.",
-    ],
-    results: [
-      "Delivered a live, customer-facing e-commerce platform for a real business",
-      "Order, inventory, and payment flows running in production",
-    ],
-    future: [
-      "Add personalised product recommendations based on order history",
-      "Extend admin dashboard with sales analytics",
-    ],
-  },
-  {
     slug: "ai-stock-prediction",
     name: "AI Stock Prediction & Inventory System",
     tagline: "Machine learning that tells five stores what to stock next week — and generates the purchase order automatically.",
@@ -311,80 +515,8 @@ export const projects = [
       "Add role-based reporting views for different store responsibilities.",
       "Expand trend analysis and forecasting as validated data and requirements become available."
     ]
-  },
-  {
-    slug: "whisky-circle-ecommerce",
-    name: "The Whisky Circle E-Commerce Platform",
-    tagline: "An e-commerce experience supported by cloud APIs and customer-facing shopping workflows.",
-    year: "2026",
-    role: "Web Developer",
-    status: "DEPLOYED — STAGING",
-    categories: ["Software Development", "Cloud"],
-    externalUrl: "https://stage.whiskycircle.co.uk/",
-    cover: { icon: "shopping-cart", gradient: "from-amber to-violet" },
-    techStack: ["React", "Node.js", "AWS Lambda", "API Gateway", "MongoDB", "Stripe"],
-    overview: "The Whisky Circle is an e-commerce website project with a customer-facing storefront and supporting backend services, developed with a modern React and cloud-oriented stack.",
-    problem: "An online store needs a coherent browsing and checkout experience while coordinating product information and backend services reliably.",
-    solution: "The project combines a responsive React storefront with API-driven backend functionality and a database-backed application layer. The current public link is a staging deployment, so it is labelled accordingly.",
-    architecture: "React storefront → API Gateway → AWS Lambda services → MongoDB, with payment integration handled through Stripe where enabled",
-    features: [
-      "Responsive storefront and product browsing",
-      "API-backed application workflows",
-      "Cloud-hosted backend services",
-      "Database-backed product and application data",
-      "Staging deployment for review and iteration"
-    ],
-    challenges: [
-      "Keeping the customer-facing experience consistent while the application is developed across frontend and backend services.",
-      "Coordinating external integrations carefully so payment and order workflows can be tested before production release."
-    ],
-    results: [
-      "Published a staging website for review at stage.whiskycircle.co.uk.",
-      "Established a foundation for a cloud-backed e-commerce experience."
-    ],
-    future: [
-      "Complete end-to-end checkout and order-flow verification before production release.",
-      "Add verified screenshots and measurable outcomes once the production workflow is confirmed."
-    ]
-  },
-  {
-    slug: "dgma-technics",
-    name: "DGMA Technics Corporate Website",
-    tagline: "A corporate website and product catalogue for an official representative of international defence manufacturers.",
-    year: "2025",
-    role: "Web Developer",
-    status: "DEPLOYED — LIVE",
-    categories: ["Software Development"],
-    cover: { icon: "shield", gradient: "from-ink-faint to-cyan" },
-    techStack: ["React.js", "SEO Optimisation", "Responsive Design"],
-    overview:
-      "The complete corporate website for DGMA Technics, an official representative of international defence manufacturers spanning land systems, naval systems, aerospace, and heavy industry equipment.",
-    problem:
-      "As a representative for multiple manufacturers across very different equipment categories, DGMA needed a site that could present land, naval, aerospace, and heavy industry product lines clearly to enquiring clients, while capturing and routing enquiries properly.",
-    solution:
-      "I structured the site around clear manufacturer and product-category pages, with a dedicated enquiry management flow so customer questions reach the right contact. SEO optimisation and fully responsive layouts were built in from the start, given the international, cross-device audience.",
-    architecture:
-      "React front end with category-based routing (Land / Naval / Aerospace / Heavy Industry) → enquiry form → contact management flow → responsive, SEO-optimised delivery.",
-    features: [
-      "Corporate homepage and company overview",
-      "Product catalogue organised by manufacturer and category",
-      "Manufacturer-specific pages for land, naval, aerospace, and heavy industry systems",
-      "Enquiry management with structured contact forms",
-      "SEO optimisation and full responsive design",
-    ],
-    challenges: [
-      "Presenting highly technical, category-diverse product lines (naval vs. aerospace vs. land systems) in a single coherent structure without the site feeling fragmented.",
-      "Balancing a professional, defence-industry tone with genuine usability for enquiry capture.",
-    ],
-    results: [
-      "Delivered a live corporate site covering all of DGMA's manufacturer relationships",
-      "Structured enquiry flow now routes customer contact requests directly",
-    ],
-    future: [
-      "Add a client portal for tracking enquiry status",
-      "Expand SEO content per product category",
-    ],
-  },
+  }
+
 ];
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug);
