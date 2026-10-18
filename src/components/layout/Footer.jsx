@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-glass-border mt-24">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-mono text-xs text-ink-faint">
-          © {new Date().getFullYear()} Umer Riaz — built with React, Tailwind &amp; Framer Motion.
+          © {new Date().getFullYear()} Muhammad Umer Riaz
         </p>
         <div className="flex items-center gap-5 text-ink-muted">
           <a
@@ -18,7 +18,7 @@ export default function Footer() {
             <FiGithub size={18} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/muhammad-umer-riaz-u014/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-ink transition-colors"
